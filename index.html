@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ARG: Bölüm 1</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <h1>ARG2024-e hoş geldiniz.</h1>
+    <p>Yarattığimız zorlayıcı soruları çözerken keyif alacağınızı düşünüyoruz.</p>
+    <p>Oyun boyunca soruların cevaplarinin tüm harflerini büyük yazmanız gerekiyor.</p>
+    <p>Soru: "ARG" yazısını 6 ileri alalım.</p>
+    <form action="Part2.html" method="post" id="form2">
+        <label for="password">Cevabi yazin:</label>
+        <input type="password" id="password" name="password">
+        <input type="submit" value="Next Episode">
+    </form>
+    <p>İyi düşünmeler.</p>
+    <footer>
+        <p>Created by IMAGINE.</p>
+        <p>Copyright © 2024 IMAGINE. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById("form2").onsubmit = function() {
+            var password = document.getElementById("password").value;
+            if (password === "FVK") {
+                window.location.href = "https://www.akjaeah.github.io/g-x-4";
+                return true;
+            } else {
+                alert("Yanliş kod. Bence daha iyi düşünmelisin!");
+                return false;
+            }
+        };
+    </script>
+</body>
+</html>
