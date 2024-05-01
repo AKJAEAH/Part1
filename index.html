@@ -8,11 +8,11 @@
     </head>
 <body>
     <h1>ARG2024-e hoş geldiniz.</h1>
-    <p>Yarattığimız zorlayıcı soruları çözerken keyif alacağınızı düşünüyoruz.</p>
-    <p>Oyun boyunca soruların cevaplarinin tüm harflerini büyük yazmanız gerekiyor.</p>
+    <p>Yarattığımız zorlayıcı soruları çözerken keyif alacağınızı düşünüyoruz.</p>
+    <p>Oyun boyunca soruların cevaplarının tüm harflerini büyük yazmanız gerekiyor.</p>
     <p>Soru: "ARG" yazısını 6 ileri alalım.</p>
-    <form action="Part2.html" method="post" id="form2">
-        <label for="password">Cevabi yazin:</label>
+    <form id="form2">
+        <label for="password">Cevabı yazın:</label>
         <input type="password" id="password" name="password">
         <input type="submit" value="Next Episode">
     </form>
@@ -22,14 +22,13 @@
         <p>Copyright © 2024 IMAGINE. All rights reserved.</p>
     </footer>
     <script>
-        document.getElementById("form2").onsubmit = function() {
+        document.getElementById("form2").onsubmit = function(event) {
+            event.preventDefault(); // Formun varsayılan gönderme davranışını engelliyoruz
             var password = document.getElementById("password").value;
-            if (password === "FVK") {
-                window.location.href = "https://www.akjaeah.github.io/g-x-4";
-                return true;
+            if (password.toUpperCase() === "FVK") { // Kullanıcı girdisini büyük harfe çeviriyoruz
+                window.location.href = "https://akjaeah.github.io/g-x-4/"; // Yönlendirme işlemi
             } else {
-                alert("Yanliş kod. Bence daha iyi düşünmelisin!");
-                return false;
+                alert("Yanlış kod. Bence daha iyi düşünmelisin!");
             }
         };
     </script>
